@@ -16,9 +16,6 @@ export interface IApiConfigProps {
   headers?: TApiConfigHeadersProps;
 }
 
-export interface IApiErrorProps {
-}
-
 interface IApiHandleProps<ExtraParams> {
   beforeRequestHandle?: (updateHeader: Function, url: string, data: ExtraParams) => void;
   handleErrors?: (error: any) => void;

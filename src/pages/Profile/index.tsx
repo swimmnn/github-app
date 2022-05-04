@@ -17,21 +17,23 @@ export const Profile: FC<IProps> = ({
     usersData,
     searchValue,
     setSearchValue
-  }) => {
+}) => {
   const {id} = useParams();
 
-  const user = usersData[Number(id)];
-
-  console.log(user)
+  const user = usersData.find(user => user.id === Number(id));
 
   return (
     <div className={S.ProfileWrapper}>
-      <ProfileTopBlock userName={user.login}/>
-      <ProfileRepoList
-        userName={user.login}
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
-      />
+      {user &&
+        <>
+          <ProfileTopBlock userName={user.login}/>
+          <ProfileRepoList
+            userName={user.login}
+            searchValue={searchValue}
+            setSearchValue={setSearchValue}
+          />
+        </>
+      }
     </div>
   );
 };
