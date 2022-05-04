@@ -1,0 +1,192 @@
+:root {
+  --black: #000;
+  --blue_click: #0060DB;
+  --blue_hover: #409CFF;
+  --blue_static: #0A84FF;
+  --border: #D8DCE0;
+  --dark-gray: #141418;
+  --dark: #1C1C1E;
+  --dark_background: #101015;
+  --grey_button: #3C3C47;
+  --hover_bg: #FCFCFF;
+  --innerpage_text_style: #4F4F4F;
+  --input_style: #9A9AAB;
+  --light-gray: #9E9EB4;
+  --light_grey: #F2F2F7;
+  --light-red: #FF375F;
+  --light_gray: #F2F2F7;
+  --red: #FF2D55;
+  --text-description: #939CB4;
+  --text_description: #939CB4;
+  --text-hover: #E5E5EA;
+  --white: #ffffff;
+  --font-secondary: "Inter", sans-serif;
+}
+
+/*@font-face {*/
+/*  font-family: 'BentonSans-Medium';*/
+/*  src:url('assets/fonts/BentonSans-Medium.eot');*/
+/*  src:url('assets/fonts/BentonSans-Medium.eot?#iefix') format('embedded-opentype'),*/
+/*  url('assets/fonts/BentonSans-Medium.woff') format('woff'),*/
+/*  url('assets/fonts/BentonSans-Medium.ttf') format('truetype'),*/
+/*  url('assets/fonts/BentonSans-Medium.svg?#iconFont') format('svg');*/
+/*  font-weight: normal;*/
+/*  font-style: normal;*/
+/*}*/
+
+/*@font-face {*/
+/*  font-family: 'BentonSans-Book';*/
+/*  src:url('assets/fonts/BentonSans-Book.eot');*/
+/*  src:url('assets/fonts/BentonSans-Book.eot?#iefix') format('embedded-opentype'),*/
+/*  url('assets/fonts/BentonSans-Book.woff') format('woff'),*/
+/*  url('assets/fonts/BentonSans-Book.ttf') format('truetype'),*/
+/*  url('assets/fonts/BentonSans-Book.svg?#iconFont') format('svg');*/
+/*  font-weight: normal;*/
+/*  font-style: normal;*/
+/*}*/
+
+/*@font-face {*/
+/*  font-family: 'BentonSans-Bold';*/
+/*  src:url('assets/fonts/BentonSans-Bold.eot');*/
+/*  src:url('assets/fonts/BentonSans-Bold.eot?#iefix') format('embedded-opentype'),*/
+/*  url('assets/fonts/BentonSans-Bold.woff') format('woff'),*/
+/*  url('assets/fonts/BentonSans-Bold.ttf') format('truetype'),*/
+/*  url('assets/fonts/BentonSans-Bold.svg?#iconFont') format('svg');*/
+/*  font-weight: normal;*/
+/*  font-style: normal;*/
+/*}*/
+
+/*:root {*/
+/*  --font-bsm: 'BentonSans-Medium';*/
+/*  --font-bsbk: 'BentonSans-Book';*/
+/*  --font-bsb: 'BentonSans-Bold';*/
+/*}*/
+
+:root.nftim {
+  --font-main: "Robot", sans-serif;
+}
+
+:root.help_ua {
+  --font-main: "Ubuntu", sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  /*// TODO base 16px, say designer*/
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 320px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body.help_ua {
+  /*// TODO var*/
+  background: #f7f8fa;
+}
+
+body.nftim {
+  background: var(--white);
+}
+
+html {
+  height: auto;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+img {
+  height: auto;
+  display: block;
+}
+
+svg {
+  display: inline-block;
+}
+
+fieldset {
+  font-family: var(--font-main);
+  border: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+label {
+  font-family: var(--font-main);
+  /*// TODO var*/
+  color: rgba(226, 226, 226, 1);
+  font-size: 14px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/*// TODO move from Input component all style on this lvl and decomposition style file on smaller*/
+input {
+  font-family: var(--font-main);
+  border: none;
+  /*// TODO var*/
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  /*// TODO var*/
+  color: rgba(226, 226, 226, 1);
+  width: 100%;
+  background-color: transparent;
+  padding: 5px;
+}
+
+input::placeholder {
+  /*// TODO var*/
+  color: rgba(170, 170, 170, 1);
+}
+
+.CharityWrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 100px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .CharityWrapper {
+    padding: 80px 0;
+  }
+}
+
+.CharityWrapper .CharityInnerWrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 1460px;
+  margin: 0 auto;
+  padding: 0 10px;
+}

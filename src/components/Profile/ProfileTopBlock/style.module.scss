@@ -1,0 +1,21 @@
+.ProfileTopBlockWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 24px;
+}
+
+.ProfileUserContent {
+  display: flex;
+  gap: 24px;
+}
+
+.ProfileAvatar {
+  width: 200px;
+  height: 200px;
+}
+
+.ProfileUserBiography {
+  margin-top: 24px;
+}

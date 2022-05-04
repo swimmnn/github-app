@@ -1,0 +1,12 @@
+.ProfileRepoWrapper {
+  display: flex;
+  border: 1px solid var(--border);
+  border-radius: 25px;
+  min-width: 450px;
+  padding: 14px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+}
+
+/*# sourceMappingURL=style.module.css.map */

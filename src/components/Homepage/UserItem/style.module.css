@@ -1,0 +1,22 @@
+.UserItemWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 25px;
+  min-width: 700px;
+  padding: 20px;
+}
+
+.UserItemLeftContent {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+.UserItemImage {
+  width: 150px;
+  height: 150px;
+}
+
+/*# sourceMappingURL=style.module.css.map */
